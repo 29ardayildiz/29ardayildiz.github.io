@@ -2,452 +2,862 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arda YILDIZ</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="https://github.com/29ardayildiz/29ardayildiz.github.io/blob/main/favicon.ico"
-        type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Arda Yıldız — AI &amp; Embedded Systems Engineer</title>
+  <meta name="description"
+    content="Portfolio of Arda Yıldız — Computer Engineer specializing in AI, Embedded Systems, Computer Vision, and low-level software. Based in Ankara, Turkey.">
+  <meta name="author" content="Arda Yıldız">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arda Yıldız — AI &amp; Embedded Systems Engineer">
+  <meta property="og:description"
+    content="Building systems that understand their environment — from low-level firmware to neural inference at the edge.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://29ardayildiz.github.io/">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://29ardayildiz.github.io/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/hero.png" alt="">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>Arda YILDIZ.</span>
-                    A Computer Engineer Student.
-                </h1>
-                <p>
-                    Hi! I am Arda. I am student as computer engineer in Departmant of Engineering at Cankaya University.
-                    I am usually do search, and improve my skills.
-                    I interested in Competitive Programming, creating Algorithms, OOP structured designs.
-                    Still learning a lot of new things, will be too. You can contact me via e-mail.
-                </p>
-                <div class="btn-con">
-                    <a href="https://29ardayildiz.github.io/Arda_YILDIZ_Cv.pdf" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
-            </div>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" aria-label="Primary navigation">
+    <div class="nav__inner">
+
+      <a href="#hero" class="nav__logo" aria-label="Back to top — Arda Yıldız">
+        A.YILDIZ
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#timeline" class="nav__link">Education</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#work" class="nav__link">Work</a></li>
+        <li><a href="#systems" class="nav__link">Systems</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li>
+          <a href="Arda_YILDIZ_Cv.pdf" class="nav__link nav__link--cv" target="_blank" rel="noopener noreferrer">CV
+            ↗</a>
+        </li>
+      </ul>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="nav-drawer">
+        <span></span>
+        <span></span>
+      </button>
+
+    </div><!-- /nav__inner -->
+
+    <!-- Mobile drawer -->
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Mobile navigation">
+      <a href="#timeline" class="nav__link drawer__link">Education</a>
+      <a href="#experience" class="nav__link drawer__link">Experience</a>
+      <a href="#work" class="nav__link drawer__link">Work</a>
+      <a href="#systems" class="nav__link drawer__link">Systems</a>
+      <a href="#contact" class="nav__link drawer__link">Contact</a>
+      <a href="Arda_YILDIZ_Cv.pdf" class="nav__link nav__link--cv drawer__link" target="_blank"
+        rel="noopener noreferrer">CV ↗</a>
+    </nav>
+  </nav>
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+         00 · HERO
+         ══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-name">
+
+      <div class="hero__body">
+
+        <!-- Left: text -->
+        <div class="hero__content">
+          <p class="hero__label mono" aria-label="Role">
+            Computer Engineer &middot; AI &amp; Embedded Systems
+          </p>
+
+          <h1 class="hero__name" id="hero-name">
+            Arda<br>
+            <em>Yıldız</em>
+          </h1>
+
+          <p class="hero__tagline" id="hero-tagline"
+            data-typewriter="Working on embedded systems, firmware development, and artificial intelligence applications.">
+            <span class="typewriter-text"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
+          </p>
         </div>
-    </header>
-    <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
-            </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p>
-                        My job is to help you with some of your software problems.
-                        I also add my personal touch to your product, making it eye-catching and easy to use.
-                        My goal is to solve problems in the simplest, most creative way and to develop algorithms.
-                    </p>
-                    <div class="btn-con">
-                        <a href="https://29ardayildiz.github.io/Arda_YILDIZ_Cv.pdf" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">1</p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">4</p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">4nd</p>
-                            <p class="small-text">Year at <br /> University</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">3.13</p>
-                            <p class="small-text">Cumulative <br /> GPA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-stats">
-                <h1 class="stat-title">My Skills</h1>
-                <h4 class="stat-title" style="font-size:15px;">Programming Languages</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">C</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Java</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">C++</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">C#</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Flutter/Dart</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">SQL</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">JavaScript</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Assembly</p>
-                    </div>
-                    
-                </div>
-                <h4 class="stat-title" style="font-size:15px;">Tools & Technologie</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">Arduino & ESP32  </p>
-                    </div> 
-                    <div class="progress-bar">
-                        <p class="prog-title">Vitis/ Vivado</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Arduino IDE </p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Git</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Unity Game Engine </p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title"> Linux / Bash </p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Unreal Game Engine</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">OpenCV </p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">TensorFlow / PyTorch</p>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Qt Creator</p>
-                    </div>
-                    <div class="progress-bar" style="width:100%;">
-                        <p class="prog-title" style="white-space:nowrap;">Network Protocols (UART, SPI, I2C, TCP/IP)</p>
-                    </div>
-            </div>
-            </div>
 
-            <h4 class="stat-title">Education</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2021 - present</p>
-                    <h5>Cankaya University<span> - Computer Engineering</span></h5>
-
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2017 - 2021</p>
-                    <h5>Ayhan Sumer High School</h5>
-
-                </div>
-
-            </div>
-        </section>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
-            </div>
-            <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
-            </p>
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port1.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Realistic Horror Game</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Cagdas-Gulec/UE4_Horror_Game_Project" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                            <a href="https://www.youtube.com/watch?v=FLW4SrO-ktk" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port4.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Dungeon Of Pacemaker</h3>
-                        <div class="icons">
-                            <a href="https://github.com/alperenelbiz/Dungeon-Of-Pacemaker--TeduJam" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>VehiCrypto</h3>
-                        <p style="text-align: center;">Blockchain-Based Vehicle Maintenance Tracking</p>
-                        <div class="icons">
-                            <a href="https://github.com/dogukanpoyraz/VehiCrypto?tab=readme-ov-file#login-page"
-                                class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port3.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Push Or Perish</h3>
-                        <p style="text-align: center;">This project is a simple reflex-based game called Push and
-                            Perish, developed using the MSP430G2553 microcontroller.</p>
-                        <div class="icons">
-                            <a href="https://github.com/29ardayildiz/Push_Or_Perish" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=0pIQgclVjL4" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port5.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3><span class="spaced" style="margin-left:50px;">Classroom</span> <br>Reservation System</h3>
-                        <p style="text-align: center;">This modern web application for managing classroom reservations in educational institutions.</p>
-                        <div class="icons">
-                            <a href="https://github.com/29ardayildiz/ClassroomReservationSystem" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=wq49cKLY9os" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </section>
-        <section class="container" id="blogs">
-            <div class="blogs-content">
-                <div class="main-title">
-                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
-                </div>
-                <div class="blogs">
-                    <div class="blog">
-                        <a href="https://vocal.media/01/cybersecurity-in-the-digital-age-challenges-and-solutions">
-                            <img src="img/blog1.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    Cybersecurity in the Digital Age: Challenges and Solutions
-                                </h4>
-                                <p>
-                                    Exploring the Evolving Threat Landscape and Effective Countermeasures for
-                                    Cybersecurity in Today's Digital World
-                                </p>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="blog">
-                        <a
-                            href="https://medium.com/@29ardayildiz/the-impact-of-online-gaming-on-mental-health-db5d0eb0e60f">
-                            <img src="img/blog2.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    The Impact of Online Gaming on Mental Health
-                                </h4>
-                                <p>
-                                    Impact of online gaming on mental health, exploring both the positive and negative
-                                    effects, and providing examples to illustrate these effects.
-                                </p>
-
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                            My contact information is as follows
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    : Ankara, Turkey
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: ardayildiz029@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: Cankaya University, Computer Engineering</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: +90 *** *** ****</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: English, German</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="https://www.instagram.com/29ardayildiz/" target="_blank">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://twitter.com/29ardayildiz" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://github.com/29ardayildiz" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/arda-y%C4%B1ld%C4%B1z-a2ab32218/" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <a href="https://29ardayildiz.github.io/Arda_YILDIZ_Cv.pdf" class="main-btn">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-
-
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
+        <!-- Right: portrait -->
+        <div class="hero__portrait-col">
+          <div class="hero__portrait-wrap">
+            <img src="img/hero.png" alt="Portrait of Arda Yıldız" class="hero__portrait" width="480" height="600"
+              loading="eager" fetchpriority="high">
+          </div>
         </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
+
+      </div><!-- /hero__body -->
+
+      <div class="hero__foot">
+        <span class="mono" style="color: var(--c-text-muted);">Ankara, Turkey &mdash; 2026</span>
+        <a href="#philosophy" class="hero__scroll-indicator" aria-label="Scroll down">
+          <span class="hero__scroll-arrow" aria-hidden="true"></span>
+          <span>scroll</span>
+        </a>
+      </div>
+
+    </section><!-- /hero -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         01 · ENGINEERING PHILOSOPHY
+         ══════════════════════════════════════════════════════ -->
+    <section class="section manifesto" id="philosophy" aria-labelledby="philosophy-heading">
+      <div class="inner">
+
+        <div class="section__label reveal">
+          <span class="mono section__num">01</span>
+          <span class="mono section__title">&sol;&sol; Engineering Philosophy</span>
         </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
+
+        <div class="manifesto__body">
+          <blockquote class="manifesto__quote reveal" id="philosophy-heading">
+            I am a computer engineering student with a strong focus on embedded systems,
+            IoT applications, and AI integrations.
+          </blockquote>
+
+          <p class="manifesto__text reveal">
+            I enjoy developing software that interacts with the real world - from
+            firmware running on resource-constrained microcontrollers to web and mobile
+            applications that control connected devices. My work mainly focuses on
+            embedded systems, IoT communication, and reliable device control.
+          </p>
+
+          <p class="manifesto__text reveal">
+            Alongside embedded development, I am also interested in artificial
+            intelligence, especially computer vision, natural language processing, and
+            retrieval-based systems. I like understanding how systems work at a low level
+            and turning that understanding into reliable, efficient, and useful software.
+          </p>
+
+          <div class="manifesto__tags reveal-group">
+            <span class="tag reveal">Embedded Systems</span>
+            <span class="tag reveal">IoT</span>
+            <span class="tag reveal">AI Integrations</span>
+            <span class="tag reveal">Edge AI</span>
+            <span class="tag reveal">Computer Vision</span>
+            <span class="tag reveal">Low-level Software</span>
+          </div>
         </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
+
+      </div>
+    </section><!-- /manifesto -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         02 · EDUCATION
+         ══════════════════════════════════════════════════════ -->
+    <section class="section" id="timeline" aria-labelledby="timeline-heading">
+      <div class="inner">
+
+        <div class="section__label reveal">
+          <span class="mono section__num">02</span>
+          <span class="mono section__title" id="timeline-heading">&sol;&sol; Education</span>
         </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
+
+        <div class="timeline">
+
+          <div class="tl-item reveal">
+            <div class="tl-period">
+              <span class="mono">Sep 2021 &mdash; June 2026</span>
+            </div>
+            <div class="tl-body">
+              <h3 class="tl-inst">B.Sc. Computer Engineering (60% Scholarship)</h3>
+              <p class="tl-role">Çankaya University</p>
+              <p class="tl-note tl-note--strong mono">CGPA &nbsp;3.23 / 4.00</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-period">
+              <span class="mono">2017 &mdash; 2021</span>
+            </div>
+            <div class="tl-body">
+              <h3 class="tl-inst">Ayhan Sümer High School</h3>
+              <p class="tl-role">High School Diploma</p>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+
+      </div>
+    </section><!-- /timeline -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         03 · EXPERIENCE
+         ══════════════════════════════════════════════════════ -->
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="inner">
+
+        <div class="section__label reveal">
+          <span class="mono section__num">03</span>
+          <span class="mono section__title" id="experience-heading">&sol;&sol; Experience</span>
         </div>
+
+        <div class="timeline">
+
+          <div class="tl-item reveal">
+            <div class="tl-period">
+              <span class="mono">Feb 2026 &mdash; Present</span>
+            </div>
+            <div class="tl-body">
+              <h3 class="tl-inst">NanoMagnetics Instruments</h3>
+              <p class="tl-role">Candidate Engineer</p>
+              <p class="tl-note mono">Developing embedded and software solutions; contributing to hardware-software
+                integration and system communication.</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-period">
+              <span class="mono">Mar 2024 &mdash; June 2026</span>
+            </div>
+            <div class="tl-body">
+              <h3 class="tl-inst">Çankaya University — IT Department</h3>
+              <p class="tl-role">Part-Time Student Developer</p>
+              <p class="tl-note mono">Designed and built the Smart School Bus Tracking System (ESP32 + SIM7600 4G, REST
+                API) and a production RFID-based access control system, both assigned by the university's Board of
+                Trustees.</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-period">
+              <span class="mono">Jun 2025 &mdash; Sep 2025</span>
+            </div>
+            <div class="tl-body">
+              <h3 class="tl-inst">Digitest Savunma ve Havacılık A.Ş.</h3>
+              <p class="tl-role">Long-Term Embedded Systems Intern</p>
+              <p class="tl-note mono">Designed FPGA systems in Vivado with custom IP cores and AXI communication; built
+                bare-metal/FreeRTOS embedded software, UART &amp; TCP/IP pipelines, and a PySide6 GUI for real-time
+                YOLOv5 object detection.</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-period">
+              <span class="mono">Jul 2024 &mdash; Sep 2024</span>
+            </div>
+            <div class="tl-body">
+              <h3 class="tl-inst">NanoMagnetics Instruments</h3>
+              <p class="tl-role">Long-Term Software Intern</p>
+              <p class="tl-note mono">Built a Flutter mobile app to control scientific devices via BLE and API;
+                integrated Firebase Authentication and Firestore, and optimized performance by resolving memory leaks.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+
+      </div>
+    </section><!-- /experience -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         03 · SELECTED WORK
+         ══════════════════════════════════════════════════════ -->
+    <section class="section" id="work" aria-labelledby="work-heading">
+      <div class="inner">
+
+        <div class="section__label reveal">
+          <span class="mono section__num">04</span>
+          <span class="mono section__title" id="work-heading">&sol;&sol; Selected Work</span>
+        </div>
+
+        <div class="work__list">
+
+          <!-- ── Project 001: Helma AI ────────────────────── -->
+          <article class="project reveal" aria-labelledby="proj-001-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/HelmaAi.png" alt="Helma AI — AI-powered elderly care mobile application"
+                  class="project__img" loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Helma AI — Elderly Care Assistant</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_001</span>
+              <h3 class="project__title" id="proj-001-title">Helma AI — Elderly Care Assistant</h3>
+              <p class="project__desc">
+                A multimodal AI-powered mobile application for elderly care, combining
+                emotion recognition across video, audio, and text with real-time
+                monitoring, reminders, and caregiver-family interaction workflows.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--blue">Flutter</span>
+                  <span class="meta-badge meta-badge--green">FastAPI</span>
+                  <span class="meta-badge meta-badge--teal">MongoDB</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">AI / Multimodal Systems</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://helma-ai.com" class="project__link" target="_blank" rel="noopener noreferrer"
+                  aria-label="Helma AI — Website">Website ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 001 -->
+
+
+          <!-- ── Project 002: Fleet Tracking System ───────── -->
+          <article class="project project--flip reveal" aria-labelledby="proj-002-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/fleettracker.jpg"
+                  alt="Fleet Tracking System for Çankaya University — ESP32 bus tracking device" class="project__img"
+                  loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Fleet Tracking System — Çankaya University</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_002</span>
+              <h3 class="project__title" id="proj-002-title">Fleet Tracking System for Çankaya University</h3>
+              <p class="project__desc">
+                A live tracking system for the university's bus fleet. The device
+                provides real-time location monitoring for students and staff, while
+                an integrated RFID validator ensures that only registered members can
+                access the transportation network.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--orange">ESP32</span>
+                  <span class="meta-badge meta-badge--gray">C++</span>
+                  <span class="meta-badge meta-badge--gray">SIM7600</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Embedded Systems &middot; PCB Design (EasyEDA)</span>
+                </div>
+              </div>
+            </div>
+
+          </article><!-- /project 002 -->
+
+
+          <!-- ── Project 003: Handheld RFID Card Reader ───── -->
+          <article class="project reveal" aria-labelledby="proj-003-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/cardreader.jpg"
+                  alt="Handheld RFID Card Reader for Çankaya University — Wi-Fi validator terminal" class="project__img"
+                  loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Handheld RFID Card Reader</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_003</span>
+              <h3 class="project__title" id="proj-003-title">Handheld RFID Card Reader for Çankaya University</h3>
+              <p class="project__desc">
+                A Wi-Fi-enabled handheld RFID validator terminal for security guards at
+                the university's main gate. The device periodically syncs a local
+                database for offline verification, logs scanned IDs locally, and
+                batches reports back to the university servers.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--orange">ESP32</span>
+                  <span class="meta-badge meta-badge--gray">C++</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Embedded Systems</span>
+                </div>
+              </div>
+            </div>
+
+          </article><!-- /project 003 -->
+
+
+          <!-- ── Project 004: Turkish Legal RAG ───────────── -->
+          <article class="project project--flip reveal" aria-labelledby="proj-004-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/turkish-legal-rag.jpg"
+                  alt="Turkish Legal Question Answering System — RAG pipeline architecture" class="project__img"
+                  loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Turkish Legal Question Answering System</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_004</span>
+              <h3 class="project__title" id="proj-004-title">Turkish Legal Question Answering System</h3>
+              <p class="project__desc">
+                An end-to-end RAG system for Turkish legal question answering —
+                embedding tuning, hybrid retrieval, reranking, and LLM fine-tuning —
+                designed to produce grounded, citation-consistent answers while
+                minimizing hallucination, evaluated with Recall@K, MRR, F1, and faithfulness.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--yellow">Python</span>
+                  <span class="meta-badge meta-badge--purple">RAG</span>
+                  <span class="meta-badge meta-badge--purple">LLM Fine-Tuning</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">AI / NLP</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/29ardayildiz/turkish-legal-rag-pipeline" class="project__link"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Turkish Legal Question Answering System — GitHub repository">GitHub ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 004 -->
+
+
+          <!-- ── Project 005: TinyVoice ────────────────────── -->
+          <article class="project reveal" aria-labelledby="proj-005-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/tiny-voice.png" alt="TinyVoice — edge AI keyword spotting system on ESP32"
+                  class="project__img" loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">TinyVoice — Keyword Spotting on ESP32</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_005</span>
+              <h3 class="project__title" id="proj-005-title">TinyVoice — Keyword Spotting System</h3>
+              <p class="project__desc">
+                An edge AI keyword spotting system optimized for microcontrollers.
+                Trained and compared multiple deep learning models on the Google
+                Speech Commands dataset, preparing a DS-CNN model for deployment
+                on ESP32-class devices.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--yellow">Python</span>
+                  <span class="meta-badge meta-badge--red">TensorFlow</span>
+                  <span class="meta-badge meta-badge--orange">ESP32</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Edge AI</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/ackgz0/tinyVoiceKWS" class="project__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="TinyVoice — GitHub repository">GitHub ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 005 -->
+
+
+          <!-- ── Project 006: Push or Perish ──────────────── -->
+          <article class="project project--flip reveal" aria-labelledby="proj-006-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/port3.jpg" alt="Push or Perish — MSP430G2553 reflex game hardware on a breadboard"
+                  class="project__img" loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Push or Perish — Bare-metal Reflex Game</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_006</span>
+              <h3 class="project__title" id="proj-006-title">Push or Perish</h3>
+              <p class="project__desc">
+                A real-time reflex game running on bare metal — built directly on the
+                MSP430G2553 microcontroller in C. No RTOS, no HAL. Pure register-level
+                programming: hardware timers, GPIO interrupts, and a deterministic
+                game loop with sub-millisecond reaction windows.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--gray">C</span>
+                  <span class="meta-badge meta-badge--gray">MSP430</span>
+                  <span class="meta-badge meta-badge--gray">Assembly</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Embedded Systems</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/29ardayildiz/Push_Or_Perish" class="project__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="Push or Perish — GitHub repository">GitHub ↗</a>
+                <a href="https://www.youtube.com/watch?v=0pIQgclVjL4" class="project__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="Push or Perish — Demo video">Demo ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 006 -->
+
+
+          <!-- ── Project 007: Classroom Reservation ───────── -->
+          <article class="project reveal" aria-labelledby="proj-007-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/port5.jpg" alt="Classroom Reservation System — web application dashboard screenshot"
+                  class="project__img" loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Classroom Reservation System</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_007</span>
+              <h3 class="project__title" id="proj-007-title">Classroom Reservation System</h3>
+              <p class="project__desc">
+                A full-stack web application for managing institutional classroom
+                reservations. Clean backend architecture with real-time availability
+                tracking, conflict-resolution logic, and multi-role access control
+                for students, faculty, and administrators.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--yellow">JavaScript</span>
+                  <span class="meta-badge meta-badge--blue">SQL</span>
+                  <span class="meta-badge meta-badge--gray">HTML/CSS</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Backend Systems</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/29ardayildiz/ClassroomReservationSystem" class="project__link"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Classroom Reservation System — GitHub repository">GitHub ↗</a>
+                <a href="https://www.youtube.com/watch?v=wq49cKLY9os" class="project__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="Classroom Reservation System — Demo video">Demo ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 007 -->
+
+
+          <!-- ── Project 008: VehiCrypto ──────────────────── -->
+          <article class="project project--flip reveal" aria-labelledby="proj-008-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/port2.jpg" alt="VehiCrypto — Blockchain vehicle maintenance web application interface"
+                  class="project__img" loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">VehiCrypto — Blockchain Vehicle Records</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_008</span>
+              <h3 class="project__title" id="proj-008-title">VehiCrypto</h3>
+              <p class="project__desc">
+                A blockchain-based vehicle maintenance tracking system. An immutable
+                service history ledger built on Ethereum smart contracts — guaranteeing
+                tamper-proof records across the full vehicle lifecycle, accessible
+                to owners, mechanics, and inspectors.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--purple">Solidity</span>
+                  <span class="meta-badge meta-badge--teal">Web3</span>
+                  <span class="meta-badge meta-badge--yellow">JavaScript</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Distributed Systems</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/dogukanpoyraz/VehiCrypto?tab=readme-ov-file#login-page"
+                  class="project__link" target="_blank" rel="noopener noreferrer"
+                  aria-label="VehiCrypto — GitHub repository">GitHub ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 008 -->
+
+
+          <!-- ── Project 009: Dungeon Of Pacemaker ────────── -->
+          <article class="project reveal" aria-labelledby="proj-009-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/port4.jpg" alt="Dungeon Of Pacemaker — TeduJam game project" class="project__img"
+                  loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Dungeon Of Pacemaker — TeduJam</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_009</span>
+              <h3 class="project__title" id="proj-009-title">Dungeon Of Pacemaker</h3>
+              <p class="project__desc">
+                A collaborative game built for TeduJam, a university game jam.
+                Developed alongside a teammate under time constraints, focusing on
+                rapid prototyping and core gameplay mechanics.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--purple">C#</span>
+                  <span class="meta-badge meta-badge--gray">Game Engine</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Game Development</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/alperenelbiz/Dungeon-Of-Pacemaker--TeduJam" class="project__link"
+                  target="_blank" rel="noopener noreferrer" aria-label="Dungeon Of Pacemaker — GitHub repository">GitHub
+                  ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 009 -->
+
+
+          <!-- ── Project 010: UE4 Horror Game ─────────────── -->
+          <article class="project project--flip reveal" aria-labelledby="proj-010-title">
+
+            <div class="project__img-col">
+              <div class="project__img-wrap">
+                <img src="img/port1.jpg" alt="Realistic Horror Game — Unreal Engine 4 environment screenshot"
+                  class="project__img" loading="lazy" width="700" height="500">
+                <div class="project__img-caption">
+                  <span class="project__img-caption-text">Realistic Horror Game — Unreal Engine 4</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project__info-col">
+              <span class="project__idx mono">IDX_010</span>
+              <h3 class="project__title" id="proj-010-title">Realistic Horror Game</h3>
+              <p class="project__desc">
+                A collaborative game project built in Unreal Engine 4. Focused on
+                real-time rendering optimization, physics simulation, and AI-driven
+                NPC behavior systems — combining C++ low-level control with
+                Blueprint visual scripting for rapid iteration.
+              </p>
+              <div class="project__meta">
+                <div class="project__row">
+                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-badge meta-badge--gray">C++</span>
+                  <span class="meta-badge meta-badge--blue">Blueprint</span>
+                  <span class="meta-badge meta-badge--red">UE4</span>
+                </div>
+                <div class="project__row">
+                  <span class="meta-lbl">Domain</span>
+                  <span class="meta-val">Real-time Systems</span>
+                </div>
+              </div>
+              <div class="project__links">
+                <a href="https://github.com/Cagdas-Gulec/UE4_Horror_Game_Project" class="project__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="Realistic Horror Game — GitHub repository">GitHub ↗</a>
+                <a href="https://www.youtube.com/watch?v=FLW4SrO-ktk" class="project__link" target="_blank"
+                  rel="noopener noreferrer" aria-label="Realistic Horror Game — Demo video">Demo ↗</a>
+              </div>
+            </div>
+
+          </article><!-- /project 010 -->
+
+        </div><!-- /work__list -->
+
+      </div>
+    </section><!-- /work -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         03 · TECHNICAL DOMAINS
+         ══════════════════════════════════════════════════════ -->
+    <section class="section systems" id="systems" aria-labelledby="systems-heading">
+      <div class="inner">
+
+        <div class="section__label reveal">
+          <span class="mono section__num">05</span>
+          <span class="mono section__title" id="systems-heading">&sol;&sol; Technical Domains</span>
+        </div>
+
+        <div class="systems__grid reveal-group">
+
+          <div class="reveal">
+            <h3 class="systems__col-title mono">Languages</h3>
+            <ul class="systems__list" role="list">
+              <li>C</li>
+              <li>C++</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>Assembly (x86 &middot; MSP430)</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Dart / Flutter</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="systems__col-title mono">Embedded &amp; Hardware</h3>
+            <ul class="systems__list" role="list">
+              <li>Arduino &amp; ESP32</li>
+              <li>MSP430G2553</li>
+              <li>Vitis / Vivado (FPGA)</li>
+              <li>FreeRTOS / Bare-metal C</li>
+              <li>UART &middot; SPI &middot; I2C &middot; I2S</li>
+              <li>TCP/IP &middot; UDP &middot; Wi-Fi &middot; Bluetooth</li>
+              <li>Qt Creator</li>
+              <li>GPIO &amp; Timer Interrupts</li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 class="systems__col-title mono">AI &amp; Systems</h3>
+            <ul class="systems__list" role="list">
+              <li>OpenCV</li>
+              <li>TensorFlow</li>
+              <li>PyTorch</li>
+              <li>RAG &amp; LLM Fine-Tuning</li>
+              <li>FastAPI &middot; MongoDB &middot; Firebase</li>
+              <li>REST APIs &middot; BLE</li>
+              <li>Linux / Bash &middot; Git</li>
+              <li>Unity &middot; Unreal Engine 4</li>
+            </ul>
+          </div>
+
+        </div><!-- /systems__grid -->
+
+      </div>
+    </section><!-- /systems -->
+
+
+    <!-- ══════════════════════════════════════════════════════
+         06 · CONTACT
+         ══════════════════════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="inner">
+
+        <div class="section__label reveal">
+          <span class="mono section__num">06</span>
+          <span class="mono section__title" id="contact-heading">&sol;&sol; Contact</span>
+        </div>
+
+        <p class="contact__headline reveal">
+          Let's build<br>something together.
+        </p>
+
+        <a href="mailto:ardayildiz029@gmail.com" class="contact__email reveal"
+          aria-label="Email Arda Yıldız at ardayildiz029@gmail.com">
+          ardayildiz029@gmail.com
+        </a>
+
+        <div class="contact__foot reveal">
+
+          <nav class="contact__socials" aria-label="Social media links">
+            <a href="https://github.com/29ardayildiz" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub profile">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/arda-y%C4%B1ld%C4%B1z-a2ab32218/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn ↗</a>
+            <a href="https://www.instagram.com/29ardayildiz/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram profile">Instagram ↗</a>
+            <a href="https://twitter.com/29ardayildiz" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="Twitter profile">Twitter ↗</a>
+          </nav>
+
+          <div class="contact__info">
+            <span class="mono">Çankaya, Ankara</span>
+            <span class="mono">Turkish (Native) &middot; English (B2)</span>
+          </div>
+
+        </div><!-- /contact__foot -->
+
+      </div>
+    </section><!-- /contact -->
+
+  </main>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <span class="mono" style="color: var(--c-text-muted);">
+        &copy; 2026 Arda Yıldız
+      </span>
+      <a href="Arda_YILDIZ_Cv.pdf" class="mono footer__cv" target="_blank" rel="noopener noreferrer"
+        aria-label="Download CV as PDF">Download CV ↗</a>
     </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
-    <script src="app.js"></script>
+  </footer>
+
+
+  <script src="app.js"></script>
+
 </body>
 
 </html>
