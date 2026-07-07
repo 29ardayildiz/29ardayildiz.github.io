@@ -12,6 +12,18 @@
   padding: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -422,15 +434,10 @@ button {
   min-height: 3.5em; /* prevent layout shift during typing */
 }
 
-.hero__languages {
-  margin-top: var(--sp-4);
-  font-size: 0.8125rem;
-  color: var(--c-text-muted);
-}
-
 /* Typewriter cursor */
 .typewriter-cursor {
-  display: inline-block;
+  display: inline;
+  white-space: nowrap;
   margin-left: 1px;
   color: var(--c-text);
   font-weight: 300;
@@ -511,7 +518,7 @@ button {
   padding-inline: var(--pad-x);
   padding-block: var(--sp-4);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-top: 1px solid var(--c-border);
   color: var(--c-text-muted);
@@ -957,8 +964,14 @@ button {
 
 @media (min-width: 640px) {
   .systems__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .systems__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
