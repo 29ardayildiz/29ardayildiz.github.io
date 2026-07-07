@@ -57,18 +57,24 @@
 
       <!-- Desktop links -->
       <ul class="nav__links" role="list">
-        <li><a href="#timeline" class="nav__link">Education</a></li>
-        <li><a href="#experience" class="nav__link">Experience</a></li>
-        <li><a href="#work" class="nav__link">Projects</a></li>
-        <li><a href="#systems" class="nav__link">Systems</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="#timeline" class="nav__link" data-i18n="nav.education">Education</a></li>
+        <li><a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#work" class="nav__link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#systems" class="nav__link" data-i18n="nav.systems">Systems</a></li>
+        <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
         <li>
-          <a href="Arda_YILDIZ_Cv.pdf" class="nav__link nav__link--cv" target="_blank" rel="noopener noreferrer">CV ↗</a>
+          <a href="Arda_YILDIZ_Cv.pdf" class="nav__link nav__link--cv" target="_blank" rel="noopener noreferrer" data-i18n="nav.cv">CV ↗</a>
         </li>
       </ul>
 
-      <!-- Right controls: theme toggle + hamburger grouped together -->
+      <!-- Right controls: lang toggle + theme toggle + hamburger grouped together -->
       <div class="nav__right">
+
+        <!-- Language toggle -->
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language" type="button">
+          <span class="lang-toggle__label" id="lang-label">TR</span>
+        </button>
+
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" type="button">
           <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
           <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
@@ -86,13 +92,13 @@
 
     <!-- Mobile drawer -->
     <nav class="nav__drawer" id="nav-drawer" aria-label="Mobile navigation">
-      <a href="#timeline" class="nav__link drawer__link">Education</a>
-      <a href="#experience" class="nav__link drawer__link">Experience</a>
-      <a href="#work" class="nav__link drawer__link">Projects</a>
-      <a href="#systems" class="nav__link drawer__link">Systems</a>
-      <a href="#contact" class="nav__link drawer__link">Contact</a>
+      <a href="#timeline" class="nav__link drawer__link" data-i18n="nav.education">Education</a>
+      <a href="#experience" class="nav__link drawer__link" data-i18n="nav.experience">Experience</a>
+      <a href="#work" class="nav__link drawer__link" data-i18n="nav.projects">Projects</a>
+      <a href="#systems" class="nav__link drawer__link" data-i18n="nav.systems">Systems</a>
+      <a href="#contact" class="nav__link drawer__link" data-i18n="nav.contact">Contact</a>
       <a href="Arda_YILDIZ_Cv.pdf" class="nav__link nav__link--cv drawer__link" target="_blank"
-        rel="noopener noreferrer">CV ↗</a>
+        rel="noopener noreferrer" data-i18n="nav.cv">CV ↗</a>
     </nav>
   </nav>
 
@@ -108,8 +114,8 @@
 
         <!-- Left: text -->
         <div class="hero__content">
-          <p class="hero__label mono" aria-label="Role">
-            Computer Engineer &middot; AI &amp; Embedded Systems
+          <p class="hero__label mono" aria-label="Role" data-i18n="hero.label">
+            Computer Engineer · AI &amp; Embedded Systems
           </p>
 
           <h1 class="hero__name" id="hero-name">
@@ -118,7 +124,8 @@
           </h1>
 
           <p class="hero__tagline" id="hero-tagline"
-            data-typewriter="Working on embedded systems, firmware development, and artificial intelligence applications.">
+            data-typewriter="Working on embedded systems, firmware development, and artificial intelligence applications."
+            data-typewriter-tr="Gömülü sistemler, yazılım geliştirme ve yapay zeka uygulamaları üzerine çalışıyorum.">
             <span class="typewriter-text"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
           </p>
         </div>
@@ -136,11 +143,12 @@
       <div class="hero__foot">
         <a href="#philosophy" class="hero__scroll-indicator" aria-label="Scroll down">
           <span class="hero__scroll-arrow" aria-hidden="true"></span>
-          <span>scroll</span>
+          <span data-i18n="hero.scroll">scroll</span>
         </a>
       </div>
 
     </section><!-- /hero -->
+
 
 
     <!-- ══════════════════════════════════════════════════════
@@ -150,23 +158,23 @@
       <div class="inner">
 
         <div class="section__label reveal">
-          <span class="section__title">Engineering Philosophy</span>
+          <span class="section__title" data-i18n="phil.title">Engineering Philosophy</span>
         </div>
 
         <div class="manifesto__body">
-          <blockquote class="manifesto__quote reveal" id="philosophy-heading">
+          <blockquote class="manifesto__quote reveal" id="philosophy-heading" data-i18n="phil.quote">
             I'm a computer engineering student with a strong focus on embedded systems,
             IoT applications and AI integrations.
           </blockquote>
 
-          <p class="manifesto__text reveal">
+          <p class="manifesto__text reveal" data-i18n="phil.p1">
             I enjoy developing software that interacts with the real world - from
             firmware running on resource-constrained microcontrollers to web and mobile
             applications that control connected devices. My work mainly focuses on
             embedded systems, IoT communication and reliable device control.
           </p>
 
-          <p class="manifesto__text reveal">
+          <p class="manifesto__text reveal" data-i18n="phil.p2">
             Alongside embedded development, I'm also interested in artificial
             intelligence, especially computer vision, natural language processing and
             retrieval-based systems. I like understanding how systems work at a low level
@@ -174,12 +182,12 @@
           </p>
 
           <div class="manifesto__tags reveal-group">
-            <span class="tag reveal">Embedded Systems</span>
-            <span class="tag reveal">IoT</span>
-            <span class="tag reveal">AI Integrations</span>
-            <span class="tag reveal">Edge AI</span>
-            <span class="tag reveal">Computer Vision</span>
-            <span class="tag reveal">Low-level Software</span>
+            <span class="tag reveal" data-i18n="phil.tag1">Embedded Systems</span>
+            <span class="tag reveal" data-i18n="phil.tag2">IoT</span>
+            <span class="tag reveal" data-i18n="phil.tag3">AI Integrations</span>
+            <span class="tag reveal" data-i18n="phil.tag4">Edge AI</span>
+            <span class="tag reveal" data-i18n="phil.tag5">Computer Vision</span>
+            <span class="tag reveal" data-i18n="phil.tag6">Low-level Software</span>
           </div>
         </div>
 
@@ -194,29 +202,29 @@
       <div class="inner">
 
         <div class="section__label reveal">
-          <span class="section__title" id="timeline-heading">Education</span>
+          <span class="section__title" id="timeline-heading" data-i18n="edu.title">Education</span>
         </div>
 
         <div class="timeline">
 
           <div class="tl-item reveal">
             <div class="tl-period">
-              <span class="mono">Sep 2021 - June 2026</span>
+              <span class="mono" data-i18n="edu.1.period">Sep 2021 - June 2026</span>
             </div>
             <div class="tl-body">
-              <h3 class="tl-inst">B.Sc. Computer Engineering (60% Scholarship)</h3>
-              <p class="tl-role">Çankaya University</p>
-              <p class="tl-note tl-note--strong mono">Graduation CGPA &nbsp;3.23 / 4.00</p>
+              <h3 class="tl-inst" data-i18n="edu.1.degree">B.Sc. Computer Engineering (60% Scholarship)</h3>
+              <p class="tl-role" data-i18n="edu.1.school">Çankaya University</p>
+              <p class="tl-note tl-note--strong mono" data-i18n="edu.1.cgpa">Graduation CGPA &nbsp;3.23 / 4.00</p>
             </div>
           </div>
 
           <div class="tl-item reveal">
             <div class="tl-period">
-              <span class="mono">2017 - 2021</span>
+              <span class="mono" data-i18n="edu.2.period">2017 - 2021</span>
             </div>
             <div class="tl-body">
-              <h3 class="tl-inst">Ayhan Sümer High School</h3>
-              <p class="tl-role">High School Diploma</p>
+              <h3 class="tl-inst" data-i18n="edu.2.degree">Ayhan Sümer High School</h3>
+              <p class="tl-role" data-i18n="edu.2.school">High School Diploma</p>
             </div>
           </div>
 
@@ -233,31 +241,31 @@
       <div class="inner">
 
         <div class="section__label reveal">
-          <span class="section__title" id="experience-heading">Experience</span>
+          <span class="section__title" id="experience-heading" data-i18n="exp.title">Experience</span>
         </div>
 
         <div class="timeline">
 
           <div class="tl-item reveal">
             <div class="tl-period">
-              <span class="mono">Feb 2026 - Present</span>
+              <span class="mono" data-i18n="exp.1.period">Feb 2026 - Present</span>
             </div>
             <div class="tl-body">
-              <h3 class="tl-inst">NanoMagnetics Instruments</h3>
-              <p class="tl-role">Candidate Engineer</p>
-              <p class="tl-note mono">Contributing to hardware-software integration and system communication with
+              <h3 class="tl-inst" data-i18n="exp.1.company">NanoMagnetics Instruments</h3>
+              <p class="tl-role" data-i18n="exp.1.role">Candidate Engineer</p>
+              <p class="tl-note mono" data-i18n="exp.1.note">Contributing to hardware-software integration and system communication with
                 developing embedded and software solutions.</p>
             </div>
           </div>
 
           <div class="tl-item reveal">
             <div class="tl-period">
-              <span class="mono">Mar 2024 - June 2026</span>
+              <span class="mono" data-i18n="exp.2.period">Mar 2024 - June 2026</span>
             </div>
             <div class="tl-body">
-              <h3 class="tl-inst">Çankaya University - IT Department</h3>
-              <p class="tl-role">Part-Time Student Developer</p>
-              <p class="tl-note mono">Designed and built Fleet Tracking System (ESP32 + SIM7600) and a Handheld
+              <h3 class="tl-inst" data-i18n="exp.2.company">Çankaya University - IT Department</h3>
+              <p class="tl-role" data-i18n="exp.2.role">Part-Time Student Developer</p>
+              <p class="tl-note mono" data-i18n="exp.2.note">Designed and built Fleet Tracking System (ESP32 + SIM7600) and a Handheld
                 RFID Card Reader for security guards. Both projects were assigned by the university's Board of
                 Trustees.</p>
             </div>
@@ -265,12 +273,12 @@
 
           <div class="tl-item reveal">
             <div class="tl-period">
-              <span class="mono">Jun 2025 - Sep 2025</span>
+              <span class="mono" data-i18n="exp.3.period">Jun 2025 - Sep 2025</span>
             </div>
             <div class="tl-body">
-              <h3 class="tl-inst">Digitest Savunma ve Havacılık A.Ş.</h3>
-              <p class="tl-role">Long-Term Embedded Systems Intern</p>
-              <p class="tl-note mono">Designed FPGA systems in Vivado with custom IP cores and AXI communication.
+              <h3 class="tl-inst" data-i18n="exp.3.company">Digitest Savunma ve Havacılık A.Ş.</h3>
+              <p class="tl-role" data-i18n="exp.3.role">Long-Term Embedded Systems Intern</p>
+              <p class="tl-note mono" data-i18n="exp.3.note">Designed FPGA systems in Vivado with custom IP cores and AXI communication.
                 Built bare-metal/FreeRTOS embedded softwares, UART &amp; TCP/IP pipelines and a PySide6 GUI for
                 real-time YOLOv5 object detection.</p>
             </div>
@@ -278,12 +286,12 @@
 
           <div class="tl-item reveal">
             <div class="tl-period">
-              <span class="mono">Jul 2024 - Sep 2024</span>
+              <span class="mono" data-i18n="exp.4.period">Jul 2024 - Sep 2024</span>
             </div>
             <div class="tl-body">
-              <h3 class="tl-inst">NanoMagnetics Instruments</h3>
-              <p class="tl-role">Long-Term Software Intern</p>
-              <p class="tl-note mono">Built a mobile application using Flutter to control scientific devices via
+              <h3 class="tl-inst" data-i18n="exp.4.company">NanoMagnetics Instruments</h3>
+              <p class="tl-role" data-i18n="exp.4.role">Long-Term Software Intern</p>
+              <p class="tl-note mono" data-i18n="exp.4.note">Built a mobile application using Flutter to control scientific devices via
                 BLE. Also integrated Firebase Authentication and Firestore while optimizing performance by resolving
                 memory leaks.</p>
             </div>
@@ -302,7 +310,7 @@
       <div class="inner">
 
         <div class="section__label reveal">
-          <span class="section__title" id="work-heading">Projects</span>
+          <span class="section__title" id="work-heading" data-i18n="work.title">Projects</span>
         </div>
 
         <div class="work__list">
@@ -322,27 +330,27 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_001</span>
-              <h3 class="project__title" id="proj-001-title">Helma AI - Elderly Care Assistant</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-001-title" data-i18n="proj.1.title">Helma AI - Elderly Care Assistant</h3>
+              <p class="project__desc" data-i18n="proj.1.desc">
                 A multimodal AI-powered mobile application for elderly care, combining
                 emotion recognition across video, audio, and text with real-time
                 monitoring, reminders, and caregiver-family interaction workflows.
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--blue">Flutter</span>
                   <span class="meta-badge meta-badge--green">FastAPI</span>
                   <span class="meta-badge meta-badge--teal">MongoDB</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">AI / Multimodal Systems</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.1.domain">AI / Multimodal Systems</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://helma-ai.com" class="project__link" target="_blank" rel="noopener noreferrer"
-                  aria-label="Helma AI - Website">Website ↗</a>
+                  aria-label="Helma AI - Website" data-i18n="link.website">Website ↗</a>
               </div>
             </div>
 
@@ -365,8 +373,8 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_002</span>
-              <h3 class="project__title" id="proj-002-title">Fleet Tracking System for Çankaya University</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-002-title" data-i18n="proj.2.title">Fleet Tracking System for Çankaya University</h3>
+              <p class="project__desc" data-i18n="proj.2.desc">
                 A live tracking system for the university's bus fleet. The device
                 provides real-time location monitoring for students and staff, while
                 an integrated RFID validator ensures that only registered members can
@@ -374,14 +382,14 @@
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--orange">ESP32</span>
                   <span class="meta-badge meta-badge--gray">C++</span>
                   <span class="meta-badge meta-badge--gray">SIM7600</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Embedded Systems &middot; PCB Design (EasyEDA)</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.2.domain">Embedded Systems &middot; PCB Design (EasyEDA)</span>
                 </div>
               </div>
             </div>
@@ -405,8 +413,8 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_003</span>
-              <h3 class="project__title" id="proj-003-title">Handheld RFID Card Reader for Çankaya University</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-003-title" data-i18n="proj.3.title">Handheld RFID Card Reader for Çankaya University</h3>
+              <p class="project__desc" data-i18n="proj.3.desc">
                 A Wi-Fi-enabled handheld RFID validator terminal for security guards at
                 the university's main gate. The device periodically syncs a local
                 database for offline verification, logs scanned IDs locally, and
@@ -414,13 +422,13 @@
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--orange">ESP32</span>
                   <span class="meta-badge meta-badge--gray">C++</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Embedded Systems</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.3.domain">Embedded Systems</span>
                 </div>
               </div>
             </div>
@@ -444,8 +452,8 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_004</span>
-              <h3 class="project__title" id="proj-004-title">Turkish Legal Question Answering System</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-004-title" data-i18n="proj.4.title">Turkish Legal Question Answering System</h3>
+              <p class="project__desc" data-i18n="proj.4.desc">
                 An end-to-end RAG system for Turkish legal question answering. Includes
                 embedding tuning, hybrid retrieval, reranking and LLM fine-tuning,
                 designed to produce grounded, citation-consistent answers while
@@ -453,20 +461,20 @@
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--yellow">Python</span>
                   <span class="meta-badge meta-badge--purple">RAG</span>
                   <span class="meta-badge meta-badge--purple">LLM Fine-Tuning</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">AI / NLP</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.4.domain">AI / NLP</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://github.com/29ardayildiz/turkish-legal-rag-pipeline" class="project__link"
                   target="_blank" rel="noopener noreferrer"
-                  aria-label="Turkish Legal Question Answering System - GitHub repository">GitHub ↗</a>
+                  aria-label="Turkish Legal Question Answering System - GitHub repository" data-i18n="link.github">GitHub ↗</a>
               </div>
             </div>
 
@@ -488,8 +496,8 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_005</span>
-              <h3 class="project__title" id="proj-005-title">TinyVoice - Keyword Spotting System</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-005-title" data-i18n="proj.5.title">TinyVoice - Keyword Spotting System</h3>
+              <p class="project__desc" data-i18n="proj.5.desc">
                 An edge AI keyword spotting system optimized for microcontrollers.
                 Trained and compared multiple deep learning models on the Google
                 Speech Commands dataset. Prepared a DS-CNN model for deployment
@@ -497,19 +505,19 @@
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--yellow">Python</span>
                   <span class="meta-badge meta-badge--red">TensorFlow</span>
                   <span class="meta-badge meta-badge--orange">ESP32</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Edge AI</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.5.domain">Edge AI</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://github.com/ackgz0/tinyVoiceKWS" class="project__link" target="_blank"
-                  rel="noopener noreferrer" aria-label="TinyVoice - GitHub repository">GitHub ↗</a>
+                  rel="noopener noreferrer" aria-label="TinyVoice - GitHub repository" data-i18n="link.github">GitHub ↗</a>
               </div>
             </div>
 
@@ -531,27 +539,27 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_006</span>
-              <h3 class="project__title" id="proj-006-title">Push or Perish</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-006-title" data-i18n="proj.6.title">Push or Perish</h3>
+              <p class="project__desc" data-i18n="proj.6.desc">
                 A real-time reflex game. Built on the MSP430G2553 microcontroller
                 using a 7-segment display, two buttons, and two LEDs. Written in
                 Assembly language.
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--gray">C</span>
                   <span class="meta-badge meta-badge--gray">MSP430</span>
                   <span class="meta-badge meta-badge--gray">Assembly</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Embedded Systems</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.6.domain">Embedded Systems</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://github.com/29ardayildiz/Push_Or_Perish" class="project__link" target="_blank"
-                  rel="noopener noreferrer" aria-label="Push or Perish - GitHub repository">GitHub ↗</a>
+                  rel="noopener noreferrer" aria-label="Push or Perish - GitHub repository" data-i18n="link.github">GitHub ↗</a>
               </div>
             </div>
 
@@ -573,8 +581,8 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_007</span>
-              <h3 class="project__title" id="proj-007-title">Classroom Reservation System</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-007-title" data-i18n="proj.7.title">Classroom Reservation System</h3>
+              <p class="project__desc" data-i18n="proj.7.desc">
                 A full-stack web application for managing institutional classroom
                 reservations. Used .NET environment and HTML/CSS/JavaScript on the
                 frontend, with features like real-time availability tracking,
@@ -583,22 +591,22 @@
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--purple">.NET</span>
                   <span class="meta-badge meta-badge--yellow">JavaScript</span>
                   <span class="meta-badge meta-badge--gray">HTML/CSS</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Backend Systems</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.7.domain">Backend Systems</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://github.com/29ardayildiz/ClassroomReservationSystem" class="project__link"
                   target="_blank" rel="noopener noreferrer"
-                  aria-label="Classroom Reservation System - GitHub repository">GitHub ↗</a>
+                  aria-label="Classroom Reservation System - GitHub repository" data-i18n="link.github">GitHub ↗</a>
                 <a href="https://www.youtube.com/watch?v=wq49cKLY9os" class="project__link" target="_blank"
-                  rel="noopener noreferrer" aria-label="Classroom Reservation System - Demo video">Demo ↗</a>
+                  rel="noopener noreferrer" aria-label="Classroom Reservation System - Demo video" data-i18n="link.demo">Demo ↗</a>
               </div>
             </div>
 
@@ -620,8 +628,8 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_008</span>
-              <h3 class="project__title" id="proj-008-title">VehiCrypto</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-008-title" data-i18n="proj.8.title">VehiCrypto</h3>
+              <p class="project__desc" data-i18n="proj.8.desc">
                 A blockchain-based vehicle maintenance tracking system. An immutable
                 service history ledger built on Ethereum smart contracts. This system
                 guarantees tamper-proof records across the full vehicle lifecycle,
@@ -629,20 +637,20 @@
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--purple">Solidity</span>
                   <span class="meta-badge meta-badge--teal">Web3</span>
                   <span class="meta-badge meta-badge--yellow">JavaScript</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Distributed Systems</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.8.domain">Distributed Systems</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://github.com/dogukanpoyraz/VehiCrypto?tab=readme-ov-file#login-page"
                   class="project__link" target="_blank" rel="noopener noreferrer"
-                  aria-label="VehiCrypto - GitHub repository">GitHub ↗</a>
+                  aria-label="VehiCrypto - GitHub repository" data-i18n="link.github">GitHub ↗</a>
               </div>
             </div>
 
@@ -664,21 +672,21 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_009</span>
-              <h3 class="project__title" id="proj-009-title">Dungeon Of Pacemaker</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-009-title" data-i18n="proj.9.title">Dungeon Of Pacemaker</h3>
+              <p class="project__desc" data-i18n="proj.9.desc">
                 A game built for TeduJam, a university hackathon. Developed with a
                 group of 4 under time constraints, focusing on rapid prototyping and
                 core gameplay mechanics.
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--purple">C#</span>
                   <span class="meta-badge meta-badge--gray">Game Engine</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Game Development</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.9.domain">Game Development</span>
                 </div>
               </div>
               <div class="project__links">
@@ -706,28 +714,28 @@
 
             <div class="project__info-col">
               <span class="project__idx mono">IDX_010</span>
-              <h3 class="project__title" id="proj-010-title">Realistic Horror Game</h3>
-              <p class="project__desc">
+              <h3 class="project__title" id="proj-010-title" data-i18n="proj.10.title">Realistic Horror Game</h3>
+              <p class="project__desc" data-i18n="proj.10.desc">
                 A game project developed using Unreal Engine and C++. Focused on
                 C++ Object Oriented Programming concepts.
               </p>
               <div class="project__meta">
                 <div class="project__row">
-                  <span class="meta-lbl">Stack</span>
+                  <span class="meta-lbl" data-i18n="proj.stack">Stack</span>
                   <span class="meta-badge meta-badge--gray">C++</span>
                   <span class="meta-badge meta-badge--blue">Blueprint</span>
                   <span class="meta-badge meta-badge--red">UE4</span>
                 </div>
                 <div class="project__row">
-                  <span class="meta-lbl">Domain</span>
-                  <span class="meta-val">Real-time Systems</span>
+                  <span class="meta-lbl" data-i18n="proj.domain">Domain</span>
+                  <span class="meta-val" data-i18n="proj.10.domain">Real-time Systems</span>
                 </div>
               </div>
               <div class="project__links">
                 <a href="https://github.com/Cagdas-Gulec/UE4_Horror_Game_Project" class="project__link" target="_blank"
-                  rel="noopener noreferrer" aria-label="Realistic Horror Game - GitHub repository">GitHub ↗</a>
+                  rel="noopener noreferrer" aria-label="Realistic Horror Game - GitHub repository" data-i18n="link.github">GitHub ↗</a>
                 <a href="https://www.youtube.com/watch?v=FLW4SrO-ktk" class="project__link" target="_blank"
-                  rel="noopener noreferrer" aria-label="Realistic Horror Game - Demo video">Demo ↗</a>
+                  rel="noopener noreferrer" aria-label="Realistic Horror Game - Demo video" data-i18n="link.demo">Demo ↗</a>
               </div>
             </div>
 
@@ -750,7 +758,7 @@
         <div class="systems__grid reveal-group">
 
           <div class="reveal">
-            <h3 class="systems__col-title mono">Programming Languages</h3>
+            <h3 class="systems__col-title mono" data-i18n="sys.col1">Programming Languages</h3>
             <ul class="systems__list" role="list">
               <li>C</li>
               <li>C++</li>
@@ -765,7 +773,7 @@
           </div>
 
           <div class="reveal">
-            <h3 class="systems__col-title mono">Embedded &amp; Hardware</h3>
+            <h3 class="systems__col-title mono" data-i18n="sys.col2">Embedded &amp; Hardware</h3>
             <ul class="systems__list" role="list">
               <li>Arduino &amp; ESP32</li>
               <li>MSP430G2553</li>
@@ -779,7 +787,7 @@
           </div>
 
           <div class="reveal">
-            <h3 class="systems__col-title mono">AI &amp; Systems</h3>
+            <h3 class="systems__col-title mono" data-i18n="sys.col3">AI &amp; Systems</h3>
             <ul class="systems__list" role="list">
               <li>OpenCV</li>
               <li>TensorFlow</li>
@@ -793,26 +801,26 @@
           </div>
 
           <div class="reveal">
-            <h3 class="systems__col-title mono">Spoken Languages</h3>
+            <h3 class="systems__col-title mono" data-i18n="sys.col4">Spoken Languages</h3>
             <ul class="systems__list" role="list">
-              <li>Turkish (Native)</li>
-              <li>English (B2)</li>
+              <li data-i18n="sys.lang1">Turkish (Native)</li>
+              <li data-i18n="sys.lang2">English (B2)</li>
             </ul>
           </div>
 
         </div><!-- /systems__grid -->
 
         <div class="systems__domains reveal">
-          <h3 class="systems__col-title mono">Domains</h3>
+          <h3 class="systems__col-title mono" data-i18n="sys.domains">Domains</h3>
           <div class="domains__list">
-            <span class="tag">IoT Systems</span>
-            <span class="tag">Edge AI</span>
-            <span class="tag">Embedded Systems</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">NLP</span>
-            <span class="tag">RAG Pipelines</span>
-            <span class="tag">FPGA Design</span>
-            <span class="tag">Mobile Development</span>
+            <span class="tag" data-i18n="sys.tag1">IoT Systems</span>
+            <span class="tag" data-i18n="sys.tag2">Edge AI</span>
+            <span class="tag" data-i18n="sys.tag3">Embedded Systems</span>
+            <span class="tag" data-i18n="sys.tag4">Computer Vision</span>
+            <span class="tag" data-i18n="sys.tag5">NLP</span>
+            <span class="tag" data-i18n="sys.tag6">RAG Pipelines</span>
+            <span class="tag" data-i18n="sys.tag7">FPGA Design</span>
+            <span class="tag" data-i18n="sys.tag8">Mobile Development</span>
           </div>
         </div>
 
@@ -828,7 +836,7 @@
 
         <span id="contact-heading" class="visually-hidden">Contact</span>
 
-        <p class="contact__headline reveal">
+        <p class="contact__headline reveal" data-i18n="contact.title">
           Contact:
         </p>
 
@@ -841,13 +849,13 @@
 
           <nav class="contact__socials" aria-label="Social media links">
             <a href="https://github.com/29ardayildiz" class="social-link" target="_blank" rel="noopener noreferrer"
-              aria-label="GitHub profile">GitHub ↗</a>
+              aria-label="GitHub profile" data-i18n="link.github">GitHub ↗</a>
             <a href="https://www.linkedin.com/in/arda-y%C4%B1ld%C4%B1z-a2ab32218/" class="social-link" target="_blank"
               rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn ↗</a>
           </nav>
 
           <div class="contact__info">
-            <span class="mono">Çankaya, Ankara</span>
+            <span class="mono" data-i18n="contact.location">Çankaya, Ankara</span>
           </div>
 
         </div><!-- /contact__foot -->
@@ -863,15 +871,16 @@
        ════════════════════════════════════════════════════════ -->
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
-      <span class="mono" style="color: var(--c-text-muted);">
+      <span class="mono" style="color: var(--c-text-muted);" data-i18n="footer.copy">
         &copy; 2026 Arda Yıldız
       </span>
       <a href="Arda_YILDIZ_Cv.pdf" class="mono footer__cv" target="_blank" rel="noopener noreferrer"
-        aria-label="Download CV as PDF">Download CV ↗</a>
+        aria-label="Download CV as PDF" data-i18n="footer.cv">Download CV ↗</a>
     </div>
   </footer>
 
 
+  <script src="translations.js"></script>
   <script src="app.js"></script>
 
 </body>

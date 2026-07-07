@@ -6,7 +6,84 @@
 (function () {
   'use strict';
 
-  /* ── 0. Theme toggle (dark / light) ─────────────────────── */
+  /* ── 0a. Language (i18n) ─────────────────────────────────── */
+  var LANG_KEY   = 'arda-lang';
+  var langToggle = document.getElementById('lang-toggle');
+  var langLabel  = document.getElementById('lang-label');
+  var currentLang = localStorage.getItem(LANG_KEY) || 'en';
+
+  function applyLang(lang) {
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang === 'tr' ? 'tr' : 'en');
+    localStorage.setItem(LANG_KEY, lang);
+
+    var dict = window.TRANSLATIONS && window.TRANSLATIONS[lang];
+    if (!dict) { return; }
+
+    // Update all data-i18n elements
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) {
+        el.textContent = dict[key];
+      }
+    });
+
+    // Update lang button label (show the OTHER language as the switchable option)
+    if (langLabel) {
+      langLabel.textContent = lang === 'tr' ? 'EN' : 'TR';
+    }
+
+    // Re-trigger typewriter with correct language text
+    restartTypewriter(lang);
+  }
+
+  function restartTypewriter(lang) {
+    var typewriterEl = document.getElementById('hero-tagline');
+    if (!typewriterEl) { return; }
+
+    var textKey = lang === 'tr' ? 'data-typewriter-tr' : 'data-typewriter';
+    var fullText   = typewriterEl.getAttribute(textKey) || typewriterEl.getAttribute('data-typewriter') || '';
+    var textSpan   = typewriterEl.querySelector('.typewriter-text');
+    var cursorSpan = typewriterEl.querySelector('.typewriter-cursor');
+    if (!textSpan || !cursorSpan) { return; }
+
+    // Clear current text and restart
+    textSpan.textContent = '';
+    cursorSpan.classList.remove('is-done');
+
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      textSpan.textContent = fullText;
+      cursorSpan.classList.add('is-done');
+      return;
+    }
+
+    var charIndex = 0;
+    var speed     = 22;
+
+    function typeNext() {
+      if (charIndex < fullText.length) {
+        textSpan.textContent += fullText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeNext, speed);
+      } else {
+        cursorSpan.classList.add('is-done');
+      }
+    }
+    typeNext();
+  }
+
+  // Apply stored language on load (after DOM ready)
+  applyLang(currentLang);
+
+  if (langToggle) {
+    langToggle.addEventListener('click', function () {
+      applyLang(currentLang === 'tr' ? 'en' : 'tr');
+    });
+  }
+
+
+  /* ── 0b. Theme toggle (dark / light) ────────────────────── */
   var themeToggle = document.getElementById('theme-toggle');
   var THEME_KEY = 'arda-theme';
 
@@ -142,40 +219,8 @@
   }
 
 
-  /* ── 5. Typewriter effect ───────────────────────────────── */
-  var typewriterEl = document.getElementById('hero-tagline');
 
-  if (typewriterEl) {
-    var fullText   = typewriterEl.getAttribute('data-typewriter') || '';
-    var textSpan   = typewriterEl.querySelector('.typewriter-text');
-    var cursorSpan = typewriterEl.querySelector('.typewriter-cursor');
-    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (prefersReduced) {
-      // Skip animation — show full text immediately
-      if (textSpan) { textSpan.textContent = fullText; }
-      if (cursorSpan) { cursorSpan.classList.add('is-done'); }
-    } else {
-      var charIndex = 0;
-      var delay     = 300;   // ms before typing starts
-      var speed     = 22;    // ms per character
-
-      setTimeout(function startTyping() {
-        if (!textSpan || !cursorSpan) { return; }
-
-        function typeNext() {
-          if (charIndex < fullText.length) {
-            textSpan.textContent += fullText.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeNext, speed);
-          } else {
-            cursorSpan.classList.add('is-done');
-          }
-        }
-
-        typeNext();
-      }, delay);
-    }
-  }
+  /* ── 5. Typewriter ───────────────────────────────────────── */
+  /* Handled by restartTypewriter() called from applyLang() above */
 
 })();

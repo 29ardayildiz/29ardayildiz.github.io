@@ -281,6 +281,37 @@ button {
   margin-left: auto;
 }
 
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 0.6rem;
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  background: none;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+
+.lang-toggle:hover {
+  border-color: var(--c-border-strong);
+  background-color: rgba(128, 128, 128, 0.08);
+  color: var(--c-text);
+}
+
+.lang-toggle__label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+}
+
 /* Theme toggle */
 .theme-toggle {
   display: flex;
