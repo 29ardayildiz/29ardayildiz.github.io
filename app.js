@@ -6,6 +6,30 @@
 (function () {
   'use strict';
 
+  /* ── 0. Theme toggle (dark / light) ─────────────────────── */
+  var themeToggle = document.getElementById('theme-toggle');
+  var THEME_KEY = 'arda-theme';
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+
+  var storedTheme = localStorage.getItem(THEME_KEY);
+  if (storedTheme) {
+    applyTheme(storedTheme);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var current = document.documentElement.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem(THEME_KEY, next);
+    });
+  }
+
+
   /* ── Cached elements ────────────────────────────────────── */
   var nav       = document.getElementById('nav');
   var toggle    = document.getElementById('nav-toggle');
